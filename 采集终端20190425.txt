@@ -1,0 +1,215 @@
+ALTER TABLE `q_item_para_origdetail_rela`
+ADD COLUMN `RULE_CLASS`  varchar(32) NULL COMMENT '规则分类' AFTER `COMPARISON_FIELD`;
+
+
+delete from q_item_para_origdetail where para_id ='20180921130938000939';
+
+
+delete from q_item_para_origdetail where para_id ='20180921130938000940';
+
+
+delete from q_item_para_origdetail where para_id ='20180921130938000941';
+
+
+update  q_item_para_origdetail set item_id ='1040',item_name ='电能表电池欠压事件' , test_group ='电能表电池欠压事件' ,
+test_categories ='电能表电池欠压事件',group_no ='18010214230873'
+where para_id ='20180921130938000936';
+
+
+update  q_item_para_origdetail set item_id ='1040',item_name ='电能表电池欠压事件' , test_group ='电能表电池欠压事件' ,
+test_categories ='电能表电池欠压事件',group_no ='18010214230874'
+where para_id ='20180921130938000937';
+
+delete from q_item_para_origdetail where para_id ='20180921130938000938';
+
+
+delete from q_item_para_origdetail where para_id ='20180921130938000931';
+
+
+
+
+delete from q_item_para_origdetail where para_id ='20180921130938000923';
+
+
+
+update  q_item_para_origdetail set item_id ='1064',item_name ='磁场异常事件' , test_group ='磁场异常事件' ,
+test_categories ='磁场异常事件',group_no ='18010214230873'
+where para_id ='20180921130938000921';
+
+
+update  q_item_para_origdetail set item_id ='1064',item_name ='磁场异常事件' , test_group ='磁场异常事件' ,
+test_categories ='磁场异常事件',group_no ='18010214230874'
+where para_id ='20180921130938000920';
+
+
+INSERT INTO q_item_para_origdetail (`PARA_ID`, `TEST_CATEGORIES`, `IABC`, `PF`, `LOAD_CURRENT`, `ITEM_ID`, 
+`ITEM_NAME`, `ITME_TCNS`, `ITME_METH`, `TEST_GROUP`, `GROUP_NO`, `SYS_NO`, `DETECT_ITEM_POINT`, `ERR_ABS`, 
+`DATA_ITEM1`, `DATA_ITEM2`, `DATA_ITEM3`, `DATA_ITEM4`, `DEFAULT_RESULT`, `UNIT_MARK`, `RESULT_TYPE`, 
+`DETECT_RESULT`, `INT_CONVERT_ERR`) VALUES ('92018092945', '抄表参数', '', '', '', '1127', '抄表参数', '', 
+'', '抄表参数', '18010214230873', '', '2', NULL, '测试主站设置与查询抄表日、抄表时间、抄表间隔等。', '抄表日',
+ '1-31日', '1-31日', '1-31日', '', '01', '', '');
+
+INSERT INTO q_item_para_origdetail (`PARA_ID`, `TEST_CATEGORIES`, `IABC`, `PF`, `LOAD_CURRENT`, `ITEM_ID`, 
+`ITEM_NAME`, `ITME_TCNS`, `ITME_METH`, `TEST_GROUP`, `GROUP_NO`, `SYS_NO`, `DETECT_ITEM_POINT`, `ERR_ABS`, 
+`DATA_ITEM1`, `DATA_ITEM2`, `DATA_ITEM3`, `DATA_ITEM4`,  `DEFAULT_RESULT`, `UNIT_MARK`, 
+`RESULT_TYPE`, `DETECT_RESULT`, `INT_CONVERT_ERR`) VALUES ('92018092946', '抄表参数', '', '', '', '1127', 
+'抄表参数', '', '', '抄表参数', '18010214230873', '', '3', NULL, '测试主站设置与查询抄表日、抄表时间、抄表间隔等。', 
+'抄表时间', '0:15', '0:15', '0:15', '', '01', '', '');
+
+INSERT INTO q_item_para_origdetail (`PARA_ID`, `TEST_CATEGORIES`, `IABC`, `PF`, `LOAD_CURRENT`, `ITEM_ID`, 
+`ITEM_NAME`, `ITME_TCNS`, `ITME_METH`, `TEST_GROUP`, `GROUP_NO`, `SYS_NO`, `DETECT_ITEM_POINT`, `ERR_ABS`, 
+`DATA_ITEM1`, `DATA_ITEM2`, `DATA_ITEM3`, `DATA_ITEM4`, `DEFAULT_RESULT`, `UNIT_MARK`, 
+`RESULT_TYPE`, `DETECT_RESULT`, `INT_CONVERT_ERR`) VALUES ('92018092947', '抄表参数', '', '', '', '1127', 
+'抄表参数', '', '', '抄表参数', '18010214230873', '', '4', NULL, '测试主站设置与查询抄表日、抄表时间、抄表间隔等。', 
+'抄表间隔', '2 min', '2 min', '2 min', '', '01', '', '');
+
+
+INSERT INTO q_item_para_origdetail  (`para_id`, `TEST_CATEGORIES`, `item_id`, `item_name`, `test_group`, `group_no`, `detect_item_point`, `data_item1`, `data_item2`, `data_item3`, `data_item4`, `data_item5`, `DEFAULT_RESULT`, `result_type`) VALUES ('82018092985', '终端时钟', '1130', '电能表实时数据', '电能表实时数据', '18010214230873', '15', '终端时钟', '', '', '', '', '', '01');
+INSERT INTO q_item_para_origdetail  (`para_id`, `TEST_CATEGORIES`, `item_id`, `item_name`, `test_group`, `group_no`, `detect_item_point`, `data_item1`, `data_item2`, `data_item3`, `data_item4`, `data_item5`, `DEFAULT_RESULT`, `result_type`) VALUES ('82018092986', 'ABC三相断相统计数据及最近一次断相记录', '1130', '电能表实时数据', '电能表实时数据', '18010214230873', '16', 'ABC三相断相统计数据及最近一次断相记录', '', '', '', '', '', '01');
+INSERT INTO q_item_para_origdetail  (`para_id`, `TEST_CATEGORIES`, `item_id`, `item_name`, `test_group`, `group_no`, `detect_item_point`, `data_item1`, `data_item2`, `data_item3`, `data_item4`, `data_item5`, `DEFAULT_RESULT`, `result_type`) VALUES ('82018092987', '终端参数设置状态', '1130', '电能表实时数据', '电能表实时数据', '18010214230873', '17', '终端参数设置状态', '', '', '', '', '', '01');
+INSERT INTO q_item_para_origdetail  (`para_id`, `TEST_CATEGORIES`, `item_id`, `item_name`, `test_group`, `group_no`, `detect_item_point`, `data_item1`, `data_item2`, `data_item3`, `data_item4`, `data_item5`, `DEFAULT_RESULT`, `result_type`) VALUES ('82018092988', '终端上行通信状态', '1130', '电能表实时数据', '电能表实时数据', '18010214230873', '18', '终端上行通信状态', '', '', '', '', '', '01');
+INSERT INTO q_item_para_origdetail  (`para_id`, `TEST_CATEGORIES`, `item_id`, `item_name`, `test_group`, `group_no`, `detect_item_point`, `data_item1`, `data_item2`, `data_item3`, `data_item4`, `data_item5`, `DEFAULT_RESULT`, `result_type`) VALUES ('82018092989', '终端控制设置状态', '1130', '电能表实时数据', '电能表实时数据', '18010214230873', '19', '终端控制设置状态', '', '', '', '', '', '01');
+INSERT INTO q_item_para_origdetail  (`para_id`, `TEST_CATEGORIES`, `item_id`, `item_name`, `test_group`, `group_no`, `detect_item_point`, `data_item1`, `data_item2`, `data_item3`, `data_item4`, `data_item5`, `DEFAULT_RESULT`, `result_type`) VALUES ('82018092990', '终端当前控制状态', '1130', '电能表实时数据', '电能表实时数据', '18010214230873', '20', '终端当前控制状态', '', '', '', '', '', '01');
+INSERT INTO q_item_para_origdetail  (`para_id`, `TEST_CATEGORIES`, `item_id`, `item_name`, `test_group`, `group_no`, `detect_item_point`, `data_item1`, `data_item2`, `data_item3`, `data_item4`, `data_item5`, `DEFAULT_RESULT`, `result_type`) VALUES ('82018092991', '终端状态量及变位标志', '1130', '电能表实时数据', '电能表实时数据', '18010214230873', '21', '终端状态量及变位标志', '', '', '', '', '', '01');
+INSERT INTO q_item_para_origdetail  (`para_id`, `TEST_CATEGORIES`, `item_id`, `item_name`, `test_group`, `group_no`, `detect_item_point`, `data_item1`, `data_item2`, `data_item3`, `data_item4`, `data_item5`, `DEFAULT_RESULT`, `result_type`) VALUES ('82018092992', '终端事件标志状态', '1130', '电能表实时数据', '电能表实时数据', '18010214230873', '22', '终端事件标志状态', '', '', '', '', '', '01');
+INSERT INTO q_item_para_origdetail  (`para_id`, `TEST_CATEGORIES`, `item_id`, `item_name`, `test_group`, `group_no`, `detect_item_point`, `data_item1`, `data_item2`, `data_item3`, `data_item4`, `data_item5`, `DEFAULT_RESULT`, `result_type`) VALUES ('82018092993', '电能运行表状态信息', '1130', '电能表实时数据', '电能表实时数据', '18010214230873', '23', '电能运行表状态信息', '', '', '', '', '', '01');
+INSERT INTO q_item_para_origdetail  (`para_id`, `TEST_CATEGORIES`, `item_id`, `item_name`, `test_group`, `group_no`, `detect_item_point`, `data_item1`, `data_item2`, `data_item3`, `data_item4`, `data_item5`, `DEFAULT_RESULT`, `result_type`) VALUES ('82018092994', '当日/月通信流量', '1130', '电能表实时数据', '电能表实时数据', '18010214230873', '24', '当日/月通信流量', '', '', '', '', '', '01');
+INSERT INTO q_item_para_origdetail  (`para_id`, `TEST_CATEGORIES`, `item_id`, `item_name`, `test_group`, `group_no`, `detect_item_point`, `data_item1`, `data_item2`, `data_item3`, `data_item4`, `data_item5`, `DEFAULT_RESULT`, `result_type`) VALUES ('92018092985', '日有功功率和有功电量的存储间隔', '1130', '电能表实时数据', '电能表实时数据', '18010214230873', '1', '日有功功率和有功电量的存储间隔', '2min', '', '', '', '', '01');
+INSERT INTO q_item_para_origdetail  (`para_id`, `TEST_CATEGORIES`, `item_id`, `item_name`, `test_group`, `group_no`, `detect_item_point`, `data_item1`, `data_item2`, `data_item3`, `data_item4`, `data_item5`, `DEFAULT_RESULT`, `result_type`) VALUES ('92018092986', '实时有功功率', '1130', '电能表实时数据', '电能表实时数据', '18010214230873', '2', '实时有功功率', '', '', '', '', '', '01');
+INSERT INTO q_item_para_origdetail  (`para_id`, `TEST_CATEGORIES`, `item_id`, `item_name`, `test_group`, `group_no`, `detect_item_point`, `data_item1`, `data_item2`, `data_item3`, `data_item4`, `data_item5`, `DEFAULT_RESULT`, `result_type`) VALUES ('92018092987', '实时无功功率', '1130', '电能表实时数据', '电能表实时数据', '18010214230873', '3', '实时无功功率', '', '', '', '', '', '01');
+INSERT INTO q_item_para_origdetail  (`para_id`, `TEST_CATEGORIES`, `item_id`, `item_name`, `test_group`, `group_no`, `detect_item_point`, `data_item1`, `data_item2`, `data_item3`, `data_item4`, `data_item5`, `DEFAULT_RESULT`, `result_type`) VALUES ('92018092988', '当日/月总加有功电能量（总、各费率）', '1130', '电能表实时数据', '电能表实时数据', '18010214230873', '4', '当日/月总加有功电能量（总、各费率）', '', '', '', '', '', '01');
+INSERT INTO q_item_para_origdetail  (`para_id`, `TEST_CATEGORIES`, `item_id`, `item_name`, `test_group`, `group_no`, `detect_item_point`, `data_item1`, `data_item2`, `data_item3`, `data_item4`, `data_item5`, `DEFAULT_RESULT`, `result_type`) VALUES ('92018092989', '当日/月总加无功电能量', '1130', '电能表实时数据', '电能表实时数据', '18010214230873', '5', '当日/月总加无功电能量', '', '', '', '', '', '01');
+INSERT INTO q_item_para_origdetail  (`para_id`, `TEST_CATEGORIES`, `item_id`, `item_name`, `test_group`, `group_no`, `detect_item_point`, `data_item1`, `data_item2`, `data_item3`, `data_item4`, `data_item5`, `DEFAULT_RESULT`, `result_type`) VALUES ('92018092990', '终端当前剩余电量（费）', '1130', '电能表实时数据', '电能表实时数据', '18010214230873', '6', '终端当前剩余电量（费）', '', '', '', '', '', '01');
+INSERT INTO q_item_para_origdetail  (`para_id`, `TEST_CATEGORIES`, `item_id`, `item_name`, `test_group`, `group_no`, `detect_item_point`, `data_item1`, `data_item2`, `data_item3`, `data_item4`, `data_item5`, `DEFAULT_RESULT`, `result_type`) VALUES ('92018092991', '电能表当前各费率正/反向有/无功电能示值', '1130', '电能表实时数据', '电能表实时数据', '18010214230873', '7', '电能表当前各费率正/反向有/无功电能示值', '', '', '', '', '', '01');
+INSERT INTO q_item_para_origdetail  (`para_id`, `TEST_CATEGORIES`, `item_id`, `item_name`, `test_group`, `group_no`, `detect_item_point`, `data_item1`, `data_item2`, `data_item3`, `data_item4`, `data_item5`, `DEFAULT_RESULT`, `result_type`) VALUES ('92018092992', '各费率有功总最大需量及时标', '1130', '电能表实时数据', '电能表实时数据', '18010214230873', '8', '各费率有功总最大需量及时标', '', '', '', '', '', '01');
+INSERT INTO q_item_para_origdetail  (`para_id`, `TEST_CATEGORIES`, `item_id`, `item_name`, `test_group`, `group_no`, `detect_item_point`, `data_item1`, `data_item2`, `data_item3`, `data_item4`, `data_item5`, `DEFAULT_RESULT`, `result_type`) VALUES ('92018092993', '各费率当前有功最大需量及时标', '1130', '电能表实时数据', '电能表实时数据', '18010214230873', '9', '各费率当前有功最大需量及时标', '', '', '', '', '', '01');
+INSERT INTO q_item_para_origdetail  (`para_id`, `TEST_CATEGORIES`, `item_id`, `item_name`, `test_group`, `group_no`, `detect_item_point`, `data_item1`, `data_item2`, `data_item3`, `data_item4`, `data_item5`, `DEFAULT_RESULT`, `result_type`) VALUES ('92018092994', '实时总有功功率', '1130', '电能表实时数据', '电能表实时数据', '18010214230873', '10', '实时总有功功率', '', '', '', '', '', '01');
+INSERT INTO q_item_para_origdetail  (`para_id`, `TEST_CATEGORIES`, `item_id`, `item_name`, `test_group`, `group_no`, `detect_item_point`, `data_item1`, `data_item2`, `data_item3`, `data_item4`, `data_item5`, `DEFAULT_RESULT`, `result_type`) VALUES ('92018092995', '实时总无功功率', '1130', '电能表实时数据', '电能表实时数据', '18010214230873', '11', '实时总无功功率', '', '', '', '', '', '01');
+INSERT INTO q_item_para_origdetail  (`para_id`, `TEST_CATEGORIES`, `item_id`, `item_name`, `test_group`, `group_no`, `detect_item_point`, `data_item1`, `data_item2`, `data_item3`, `data_item4`, `data_item5`, `DEFAULT_RESULT`, `result_type`) VALUES ('92018092996', '实时功率因数', '1130', '电能表实时数据', '电能表实时数据', '18010214230873', '12', '实时功率因数', '', '', '', '', '', '01');
+INSERT INTO q_item_para_origdetail  (`para_id`, `TEST_CATEGORIES`, `item_id`, `item_name`, `test_group`, `group_no`, `detect_item_point`, `data_item1`, `data_item2`, `data_item3`, `data_item4`, `data_item5`, `DEFAULT_RESULT`, `result_type`) VALUES ('92018092997', '实时电压、电流', '1130', '电能表实时数据', '电能表实时数据', '18010214230873', '13', '实时电压、电流', '', '', '', '', '', '01');
+INSERT INTO q_item_para_origdetail  (`para_id`, `TEST_CATEGORIES`, `item_id`, `item_name`, `test_group`, `group_no`, `detect_item_point`, `data_item1`, `data_item2`, `data_item3`, `data_item4`, `data_item5`, `DEFAULT_RESULT`, `result_type`) VALUES ('92018092998', '电压、电流相角', '1130', '电能表实时数据', '电能表实时数据', '18010214230873', '14', '电压、电流相角', '', '', '', '', '', '01');
+
+
+INSERT INTO q_item_para_origdetail   (`para_id`, `TEST_CATEGORIES`, `item_id`, `item_name`, `test_group`, `group_no`, `detect_item_point`, `data_item1`, `data_item2`, `data_item3`, `data_item4`, `data_item5`, `DEFAULT_RESULT`, `result_type`) VALUES ('92018093054', '终端故障记录485通讯故障', '1133', '终端故障记录485通讯故障', '终端故障记录485通讯故障', '18010214230873', '1', '', '', '', '', '', '', '01');
+INSERT INTO q_item_para_origdetail   (`para_id`, `TEST_CATEGORIES`, `item_id`, `item_name`, `test_group`, `group_no`, `detect_item_point`, `data_item1`, `data_item2`, `data_item3`, `data_item4`, `data_item5`, `DEFAULT_RESULT`, `result_type`) VALUES ('82018093054', '终端抄表失败事件', '1134', '终端抄表失败事件', '终端抄表失败事件', '18010214230873', '1', '', '', '', '', '', '', '01');
+INSERT INTO q_item_para_origdetail   (`para_id`, `TEST_CATEGORIES`, `item_id`, `item_name`, `test_group`, `group_no`, `detect_item_point`, `data_item1`, `data_item2`, `data_item3`, `data_item4`, `data_item5`, `DEFAULT_RESULT`, `result_type`) VALUES ('20180921000891', '时钟召测和对时', '1151', '时钟召测和对时', '时钟召测和对时', '18010214230873', '1', '', '对时误差', '对时误差≤5s，日计时误差≤±0.5s/d。', '1', '', '1', '01');
+
+
+CREATE TABLE `m_detect_message` (
+  `id` varchar(64) NOT NULL COMMENT '主键',
+  `DETECT_TASK_NO` varchar(64) DEFAULT NULL COMMENT '检定任务单编号',
+  `DETECT_EQUIP_NO` varchar(64) DEFAULT NULL COMMENT '检定线/台体编号',
+  `ITEM_ID` varchar(32) DEFAULT NULL COMMENT '试验项ID',
+  `message` mediumtext COMMENT '报文信息',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+
+
+
+
+
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('1', '20180921131042000989', '20180921130938000668', 'DETECT_RESULT', 'DETECT_RESULT', 'TEST_CATEGORIES,TEST_GROUP', '01');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('10', '20180921131042001000', '20180921130938000677', 'DETECT_RESULT', 'DETECT_RESULT', 'TEST_GROUP,TEST_CATEGORIES', '01');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('11', '20180921131042001001', '20180921130938000678', 'DETECT_RESULT', 'DETECT_RESULT', 'TEST_GROUP,TEST_CATEGORIES', '01');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('12', '', '20180921130938000679', 'DETECT_RESULT', 'DETECT_RESULT', 'TEST_GROUP,TEST_CATEGORIES', '03');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('13', '', '20180921130938000680', 'DETECT_RESULT', 'DETECT_RESULT', 'TEST_GROUP,TEST_CATEGORIES', '03');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('14', '', '20180921130938000681', 'DETECT_RESULT', 'DETECT_RESULT', 'TEST_GROUP,TEST_CATEGORIES', '03');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('15', '', '20180921130938000682', 'DETECT_RESULT', 'DETECT_RESULT', 'TEST_GROUP,TEST_CATEGORIES', '03');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('16', '', '20180921130938000683', 'DETECT_RESULT', 'DETECT_RESULT', 'TEST_GROUP,TEST_CATEGORIES', '03');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('17', '20180921131042001016', '20180921130938000684', 'DETECT_RESULT', 'DETECT_RESULT', 'TEST_GROUP,TEST_CATEGORIES', '01');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('18', '20180921131042001017', '20180921130938000685', 'DETECT_RESULT', 'DETECT_RESULT', 'TEST_GROUP,TEST_CATEGORIES', '01');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('19', '20180921131042001020', '20180921130938000686', 'DETECT_RESULT', 'DETECT_RESULT', 'TEST_GROUP,TEST_CATEGORIES', '01');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('2', '20180921131042000990', '20180921130938000669', 'DETECT_RESULT', 'DETECT_RESULT', 'TEST_GROUP,TEST_CATEGORIES', '01');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('20', '', '20180921130938000687', 'DETECT_RESULT', 'DETECT_RESULT', 'TEST_GROUP,TEST_CATEGORIES', '03');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('21', '20180921131042001024', '20180921130938000688', 'DETECT_RESULT', 'DETECT_RESULT', 'TEST_GROUP,TEST_CATEGORIES', '01');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('22', '20180921131042001026', '20180921130938000689', 'DETECT_RESULT', 'DETECT_RESULT', 'TEST_GROUP,TEST_CATEGORIES', '01');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('23', '20180921131042001028', '20180921130938000690', 'DETECT_RESULT', 'DETECT_RESULT', 'TEST_GROUP,TEST_CATEGORIES', '01');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('24', '20180921131042001030', '20180921130938000691', 'DETECT_RESULT', 'DETECT_RESULT', 'TEST_GROUP,TEST_CATEGORIES', '01');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('25', '20180921131042001032', '20180921130938000692', 'DETECT_RESULT', 'DETECT_RESULT', 'TEST_GROUP,TEST_CATEGORIES', '01');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('26', '20180921131042001033', '20180921130938000693', 'DETECT_RESULT', 'DETECT_RESULT', 'TEST_GROUP,TEST_CATEGORIES', '01');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('27', '20180921131042001049', '20180921130938000694', 'DETECT_RESULT', 'DETECT_RESULT', 'TEST_GROUP,TEST_CATEGORIES', '01');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('28', '20180921131042001085', '20180921130938000695', 'DETECT_RESULT', 'DETECT_RESULT', 'TEST_GROUP,TEST_CATEGORIES', '01');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('29', NULL, '20180921130938000930', 'DETECT_RESULT', 'DETECT_RESULT', 'TEST_GROUP,TEST_CATEGORIES', '03');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('3', '', '20180921130938000670', 'DETECT_RESULT', 'DETECT_RESULT', 'TEST_GROUP,TEST_CATEGORIES', '03');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('30', NULL, '20180921130938000932', 'DETECT_RESULT', 'DETECT_RESULT', 'TEST_GROUP,TEST_CATEGORIES', '03');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('31', NULL, '20180921130938000933', 'DETECT_RESULT', 'DETECT_RESULT', 'TEST_GROUP,TEST_CATEGORIES', '03');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('32', NULL, '20180921130938000936', 'DETECT_RESULT', 'DETECT_RESULT', 'TEST_GROUP,TEST_CATEGORIES', '03');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('33', NULL, '20180921130938000926', 'DETECT_RESULT', 'DETECT_RESULT', 'TEST_GROUP,TEST_CATEGORIES', '03');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('34', NULL, '20180921130938000927', 'DETECT_RESULT', 'DETECT_RESULT', 'TEST_GROUP,TEST_CATEGORIES', '03');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('35', NULL, '20180921130938000928', 'DETECT_RESULT', 'DETECT_RESULT', 'TEST_GROUP,TEST_CATEGORIES', '03');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('36', NULL, '20180921130938000910', 'DETECT_RESULT', 'DETECT_RESULT', 'TEST_GROUP,TEST_CATEGORIES', '03');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('37', NULL, '20180921130938000915', NULL, NULL, NULL, NULL);
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('38', NULL, '20180921130938000907', NULL, NULL, NULL, NULL);
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('39', NULL, '20180921130938000919', NULL, NULL, NULL, NULL);
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('4', '20180921131042000993', '20180921130938000671', 'DETECT_RESULT', 'DETECT_RESULT', 'TEST_GROUP,TEST_CATEGORIES', '01');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('40', NULL, '20180921130938000905', NULL, NULL, NULL, NULL);
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('41', NULL, '20180921130938000912', NULL, NULL, NULL, NULL);
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('42', NULL, '20180921130938000929', NULL, NULL, NULL, NULL);
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('43', NULL, '20180921130938000924', NULL, NULL, NULL, NULL);
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('44', NULL, '20180921130938000934', NULL, NULL, NULL, NULL);
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('45', NULL, '20180921130938000935', NULL, NULL, NULL, NULL);
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('46', NULL, '20180921130938000925', NULL, NULL, NULL, NULL);
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('47', NULL, '', NULL, NULL, NULL, NULL);
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('48', NULL, '20180921130938000918', NULL, NULL, NULL, NULL);
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('49', NULL, '20180921130938000906', NULL, NULL, NULL, NULL);
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('5', '20180921131042001003', '20180921130938000672', 'DETECT_RESULT', 'DETECT_RESULT', 'TEST_GROUP,TEST_CATEGORIES', '01');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('50', NULL, '20180921130938000917', NULL, NULL, NULL, NULL);
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('51', NULL, '20180921130938000911', NULL, NULL, NULL, NULL);
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('52', NULL, '20180921130938000916', NULL, NULL, NULL, NULL);
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('53', NULL, '20180921130938000914', NULL, NULL, NULL, NULL);
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('54', NULL, '20180921130938000908', NULL, NULL, NULL, NULL);
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('55', NULL, '20180921130938000913', NULL, NULL, NULL, NULL);
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('56', NULL, '20180921130938000921', NULL, NULL, NULL, NULL);
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('57', NULL, '20180921130938000909', NULL, NULL, NULL, NULL);
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('58', NULL, '20180921130938000922', NULL, NULL, NULL, NULL);
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('59', '20180921131042001035', '20180921130938000902', 'data_item1', 'data_item1', 'TEST_GROUP,TEST_CATEGORIES', '01');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('6', '20180921131042000996', '20180921130938000673', 'DETECT_RESULT', 'DETECT_RESULT', 'TEST_GROUP,TEST_CATEGORIES', '01');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('60', '20180921131042001034', '20180921130938000903', 'data_item1', 'data_item1', 'TEST_GROUP,TEST_CATEGORIES', '01');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('61', '2018092929', '85639611226', 'data_item1', 'data_item1', 'TEST_GROUP,TEST_CATEGORIES', '01');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('62', NULL, '20180921130938000886', NULL, NULL, NULL, '03');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('63', NULL, '20180921130938000887', NULL, NULL, NULL, '03');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('64', '20180921130838000883', '20180921130938000883', 'data_item1', 'data_item1', 'TEST_GROUP,TEST_CATEGORIES', '01');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('65', '20180921130838000884', '20180921130938000884', 'data_item1', 'data_item1', 'TEST_GROUP,TEST_CATEGORIES', '01');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('66', '20180921130838000885', '20180921130938000885', 'data_item1', 'data_item1', 'TEST_GROUP,TEST_CATEGORIES', '01');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('67', NULL, '92018092945', NULL, NULL, NULL, '03');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('68', NULL, '92018092946', NULL, NULL, NULL, '03');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('69', NULL, '92018092947', NULL, NULL, NULL, '03');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('7', '20180921131042000997', '20180921130938000674', 'DETECT_RESULT', 'DETECT_RESULT', 'TEST_GROUP,TEST_CATEGORIES', '01');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('70', NULL, '82018092985', NULL, NULL, NULL, '03');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('71', NULL, '82018092986', NULL, NULL, NULL, '03');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('72', NULL, '82018092987', NULL, NULL, NULL, '03');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('73', NULL, '82018092988', NULL, NULL, NULL, '03');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('74', NULL, '82018092989', NULL, NULL, NULL, '03');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('75', NULL, '82018092990', NULL, NULL, NULL, '03');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('76', NULL, '82018092991', NULL, NULL, NULL, '03');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('77', NULL, '82018092992', NULL, NULL, NULL, '03');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('78', NULL, '82018092993', NULL, NULL, NULL, '03');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('79', NULL, '82018092994', NULL, NULL, NULL, '03');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('8', '20180921131042000998', '20180921130938000675', 'DETECT_RESULT', 'DETECT_RESULT', 'TEST_GROUP,TEST_CATEGORIES', '01');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('80', NULL, '92018092985', NULL, NULL, NULL, '03');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('81', NULL, '92018092986', NULL, NULL, NULL, '03');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('82', NULL, '92018092987', NULL, NULL, NULL, '03');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('83', NULL, '92018092988', NULL, NULL, NULL, '03');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('84', NULL, '92018092989', NULL, NULL, NULL, '03');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('85', NULL, '92018092990', NULL, NULL, NULL, '03');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('86', NULL, '92018092991', NULL, NULL, NULL, '03');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('87', NULL, '92018092992', NULL, NULL, NULL, '03');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('88', NULL, '92018092993', NULL, NULL, NULL, '03');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('89', NULL, '92018092994', NULL, NULL, NULL, '03');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('9', '20180921131042000999', '20180921130938000676', 'DETECT_RESULT', 'DETECT_RESULT', 'TEST_GROUP,TEST_CATEGORIES', '01');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('90', NULL, '92018092995', NULL, NULL, NULL, '03');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('91', NULL, '92018092996', NULL, NULL, NULL, '03');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('92', NULL, '92018092997', NULL, NULL, NULL, '03');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('93', NULL, '92018092998', NULL, NULL, NULL, '03');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('94', NULL, '92018093054', NULL, NULL, NULL, '03');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('95', NULL, '82018093054', NULL, NULL, NULL, '03');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('96', NULL, '20180921000891', NULL, NULL, NULL, '03');
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('97', NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('98', NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `q_item_para_origdetail_rela` (`RELA_ID`, `PARA_CLASS_ID_ORI`, `PARA_CLASS_ID_REP`, `SEL_FIELD_ORI`, `INT_FIELD_REP`, `COMPARISON_FIELD`, `RULE_CLASS`) VALUES ('99', NULL, NULL, NULL, NULL, NULL, NULL);
+
+
+ALTER TABLE `w_detect_rslt`
+MODIFY COLUMN `TEST_CATEGORIES`  varchar(256) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '试验分项' AFTER `RP_LEVEL`;
+
+

@@ -1,0 +1,95 @@
+ALTER TABLE `q_item_para_origdetail_rela`
+ADD COLUMN `RULE_CLASS`  varchar(32) NULL COMMENT '规则分类' AFTER `COMPARISON_FIELD`;
+
+
+delete from q_item_para_origdetail where para_id ='20180921130938000939';
+
+
+delete from q_item_para_origdetail where para_id ='20180921130938000940';
+
+
+delete from q_item_para_origdetail where para_id ='20180921130938000941';
+
+
+update  q_item_para_origdetail set item_id ='1040',item_name ='电能表电池欠压事件' , test_group ='电能表电池欠压事件' ,
+test_categories ='电能表电池欠压事件',group_no ='18010214230873'
+where para_id ='20180921130938000936';
+
+
+update  q_item_para_origdetail set item_id ='1040',item_name ='电能表电池欠压事件' , test_group ='电能表电池欠压事件' ,
+test_categories ='电能表电池欠压事件',group_no ='18010214230874'
+where para_id ='20180921130938000937';
+
+delete from q_item_para_origdetail where para_id ='20180921130938000938';
+
+
+delete from q_item_para_origdetail where para_id ='20180921130938000931';
+
+
+
+
+delete from q_item_para_origdetail where para_id ='20180921130938000923';
+
+
+
+update  q_item_para_origdetail set item_id ='1064',item_name ='磁场异常事件' , test_group ='磁场异常事件' ,
+test_categories ='磁场异常事件',group_no ='18010214230873'
+where para_id ='20180921130938000921';
+
+
+update  q_item_para_origdetail set item_id ='1064',item_name ='磁场异常事件' , test_group ='磁场异常事件' ,
+test_categories ='磁场异常事件',group_no ='18010214230874'
+where para_id ='20180921130938000920';
+
+
+INSERT INTO q_item_para_origdetail (`PARA_ID`, `TEST_CATEGORIES`, `IABC`, `PF`, `LOAD_CURRENT`, `ITEM_ID`, 
+`ITEM_NAME`, `ITME_TCNS`, `ITME_METH`, `TEST_GROUP`, `GROUP_NO`, `SYS_NO`, `DETECT_ITEM_POINT`, `ERR_ABS`, 
+`DATA_ITEM1`, `DATA_ITEM2`, `DATA_ITEM3`, `DATA_ITEM4`, `DEFAULT_RESULT`, `UNIT_MARK`, `RESULT_TYPE`, 
+`DETECT_RESULT`, `INT_CONVERT_ERR`) VALUES ('92018092945', '抄表参数', '', '', '', '1127', '抄表参数', '', 
+'', '抄表参数', '18010214230873', '', '2', NULL, '测试主站设置与查询抄表日、抄表时间、抄表间隔等。', '抄表日',
+ '1-31日', '1-31日', '1-31日', '', '01', '', '');
+
+INSERT INTO q_item_para_origdetail (`PARA_ID`, `TEST_CATEGORIES`, `IABC`, `PF`, `LOAD_CURRENT`, `ITEM_ID`, 
+`ITEM_NAME`, `ITME_TCNS`, `ITME_METH`, `TEST_GROUP`, `GROUP_NO`, `SYS_NO`, `DETECT_ITEM_POINT`, `ERR_ABS`, 
+`DATA_ITEM1`, `DATA_ITEM2`, `DATA_ITEM3`, `DATA_ITEM4`,  `DEFAULT_RESULT`, `UNIT_MARK`, 
+`RESULT_TYPE`, `DETECT_RESULT`, `INT_CONVERT_ERR`) VALUES ('92018092946', '抄表参数', '', '', '', '1127', 
+'抄表参数', '', '', '抄表参数', '18010214230873', '', '3', NULL, '测试主站设置与查询抄表日、抄表时间、抄表间隔等。', 
+'抄表时间', '0:15', '0:15', '0:15', '', '01', '', '');
+
+INSERT INTO q_item_para_origdetail (`PARA_ID`, `TEST_CATEGORIES`, `IABC`, `PF`, `LOAD_CURRENT`, `ITEM_ID`, 
+`ITEM_NAME`, `ITME_TCNS`, `ITME_METH`, `TEST_GROUP`, `GROUP_NO`, `SYS_NO`, `DETECT_ITEM_POINT`, `ERR_ABS`, 
+`DATA_ITEM1`, `DATA_ITEM2`, `DATA_ITEM3`, `DATA_ITEM4`, `DEFAULT_RESULT`, `UNIT_MARK`, 
+`RESULT_TYPE`, `DETECT_RESULT`, `INT_CONVERT_ERR`) VALUES ('92018092947', '抄表参数', '', '', '', '1127', 
+'抄表参数', '', '', '抄表参数', '18010214230873', '', '4', NULL, '测试主站设置与查询抄表日、抄表时间、抄表间隔等。', 
+'抄表间隔', '2 min', '2 min', '2 min', '', '01', '', '');
+
+
+INSERT INTO q_item_para_origdetail  (`para_id`, `TEST_CATEGORIES`, `item_id`, `item_name`, `test_group`, `group_no`, `detect_item_point`, `data_item1`, `data_item2`, `data_item3`, `data_item4`, `data_item5`, `DEFAULT_RESULT`, `result_type`) VALUES ('82018092985', '终端时钟', '1130', '电能表实时数据', '电能表实时数据', '18010214230873', '15', '终端时钟', '', '', '', '', '', '01');
+INSERT INTO q_item_para_origdetail  (`para_id`, `TEST_CATEGORIES`, `item_id`, `item_name`, `test_group`, `group_no`, `detect_item_point`, `data_item1`, `data_item2`, `data_item3`, `data_item4`, `data_item5`, `DEFAULT_RESULT`, `result_type`) VALUES ('82018092986', 'ABC三相断相统计数据及最近一次断相记录', '1130', '电能表实时数据', '电能表实时数据', '18010214230873', '16', 'ABC三相断相统计数据及最近一次断相记录', '', '', '', '', '', '01');
+INSERT INTO q_item_para_origdetail  (`para_id`, `TEST_CATEGORIES`, `item_id`, `item_name`, `test_group`, `group_no`, `detect_item_point`, `data_item1`, `data_item2`, `data_item3`, `data_item4`, `data_item5`, `DEFAULT_RESULT`, `result_type`) VALUES ('82018092987', '终端参数设置状态', '1130', '电能表实时数据', '电能表实时数据', '18010214230873', '17', '终端参数设置状态', '', '', '', '', '', '01');
+INSERT INTO q_item_para_origdetail  (`para_id`, `TEST_CATEGORIES`, `item_id`, `item_name`, `test_group`, `group_no`, `detect_item_point`, `data_item1`, `data_item2`, `data_item3`, `data_item4`, `data_item5`, `DEFAULT_RESULT`, `result_type`) VALUES ('82018092988', '终端上行通信状态', '1130', '电能表实时数据', '电能表实时数据', '18010214230873', '18', '终端上行通信状态', '', '', '', '', '', '01');
+INSERT INTO q_item_para_origdetail  (`para_id`, `TEST_CATEGORIES`, `item_id`, `item_name`, `test_group`, `group_no`, `detect_item_point`, `data_item1`, `data_item2`, `data_item3`, `data_item4`, `data_item5`, `DEFAULT_RESULT`, `result_type`) VALUES ('82018092989', '终端控制设置状态', '1130', '电能表实时数据', '电能表实时数据', '18010214230873', '19', '终端控制设置状态', '', '', '', '', '', '01');
+INSERT INTO q_item_para_origdetail  (`para_id`, `TEST_CATEGORIES`, `item_id`, `item_name`, `test_group`, `group_no`, `detect_item_point`, `data_item1`, `data_item2`, `data_item3`, `data_item4`, `data_item5`, `DEFAULT_RESULT`, `result_type`) VALUES ('82018092990', '终端当前控制状态', '1130', '电能表实时数据', '电能表实时数据', '18010214230873', '20', '终端当前控制状态', '', '', '', '', '', '01');
+INSERT INTO q_item_para_origdetail  (`para_id`, `TEST_CATEGORIES`, `item_id`, `item_name`, `test_group`, `group_no`, `detect_item_point`, `data_item1`, `data_item2`, `data_item3`, `data_item4`, `data_item5`, `DEFAULT_RESULT`, `result_type`) VALUES ('82018092991', '终端状态量及变位标志', '1130', '电能表实时数据', '电能表实时数据', '18010214230873', '21', '终端状态量及变位标志', '', '', '', '', '', '01');
+INSERT INTO q_item_para_origdetail  (`para_id`, `TEST_CATEGORIES`, `item_id`, `item_name`, `test_group`, `group_no`, `detect_item_point`, `data_item1`, `data_item2`, `data_item3`, `data_item4`, `data_item5`, `DEFAULT_RESULT`, `result_type`) VALUES ('82018092992', '终端事件标志状态', '1130', '电能表实时数据', '电能表实时数据', '18010214230873', '22', '终端事件标志状态', '', '', '', '', '', '01');
+INSERT INTO q_item_para_origdetail  (`para_id`, `TEST_CATEGORIES`, `item_id`, `item_name`, `test_group`, `group_no`, `detect_item_point`, `data_item1`, `data_item2`, `data_item3`, `data_item4`, `data_item5`, `DEFAULT_RESULT`, `result_type`) VALUES ('82018092993', '电能运行表状态信息', '1130', '电能表实时数据', '电能表实时数据', '18010214230873', '23', '电能运行表状态信息', '', '', '', '', '', '01');
+INSERT INTO q_item_para_origdetail  (`para_id`, `TEST_CATEGORIES`, `item_id`, `item_name`, `test_group`, `group_no`, `detect_item_point`, `data_item1`, `data_item2`, `data_item3`, `data_item4`, `data_item5`, `DEFAULT_RESULT`, `result_type`) VALUES ('82018092994', '当日/月通信流量', '1130', '电能表实时数据', '电能表实时数据', '18010214230873', '24', '当日/月通信流量', '', '', '', '', '', '01');
+INSERT INTO q_item_para_origdetail  (`para_id`, `TEST_CATEGORIES`, `item_id`, `item_name`, `test_group`, `group_no`, `detect_item_point`, `data_item1`, `data_item2`, `data_item3`, `data_item4`, `data_item5`, `DEFAULT_RESULT`, `result_type`) VALUES ('92018092985', '日有功功率和有功电量的存储间隔', '1130', '电能表实时数据', '电能表实时数据', '18010214230873', '1', '日有功功率和有功电量的存储间隔', '2min', '', '', '', '', '01');
+INSERT INTO q_item_para_origdetail  (`para_id`, `TEST_CATEGORIES`, `item_id`, `item_name`, `test_group`, `group_no`, `detect_item_point`, `data_item1`, `data_item2`, `data_item3`, `data_item4`, `data_item5`, `DEFAULT_RESULT`, `result_type`) VALUES ('92018092986', '实时有功功率', '1130', '电能表实时数据', '电能表实时数据', '18010214230873', '2', '实时有功功率', '', '', '', '', '', '01');
+INSERT INTO q_item_para_origdetail  (`para_id`, `TEST_CATEGORIES`, `item_id`, `item_name`, `test_group`, `group_no`, `detect_item_point`, `data_item1`, `data_item2`, `data_item3`, `data_item4`, `data_item5`, `DEFAULT_RESULT`, `result_type`) VALUES ('92018092987', '实时无功功率', '1130', '电能表实时数据', '电能表实时数据', '18010214230873', '3', '实时无功功率', '', '', '', '', '', '01');
+INSERT INTO q_item_para_origdetail  (`para_id`, `TEST_CATEGORIES`, `item_id`, `item_name`, `test_group`, `group_no`, `detect_item_point`, `data_item1`, `data_item2`, `data_item3`, `data_item4`, `data_item5`, `DEFAULT_RESULT`, `result_type`) VALUES ('92018092988', '当日/月总加有功电能量（总、各费率）', '1130', '电能表实时数据', '电能表实时数据', '18010214230873', '4', '当日/月总加有功电能量（总、各费率）', '', '', '', '', '', '01');
+INSERT INTO q_item_para_origdetail  (`para_id`, `TEST_CATEGORIES`, `item_id`, `item_name`, `test_group`, `group_no`, `detect_item_point`, `data_item1`, `data_item2`, `data_item3`, `data_item4`, `data_item5`, `DEFAULT_RESULT`, `result_type`) VALUES ('92018092989', '当日/月总加无功电能量', '1130', '电能表实时数据', '电能表实时数据', '18010214230873', '5', '当日/月总加无功电能量', '', '', '', '', '', '01');
+INSERT INTO q_item_para_origdetail  (`para_id`, `TEST_CATEGORIES`, `item_id`, `item_name`, `test_group`, `group_no`, `detect_item_point`, `data_item1`, `data_item2`, `data_item3`, `data_item4`, `data_item5`, `DEFAULT_RESULT`, `result_type`) VALUES ('92018092990', '终端当前剩余电量（费）', '1130', '电能表实时数据', '电能表实时数据', '18010214230873', '6', '终端当前剩余电量（费）', '', '', '', '', '', '01');
+INSERT INTO q_item_para_origdetail  (`para_id`, `TEST_CATEGORIES`, `item_id`, `item_name`, `test_group`, `group_no`, `detect_item_point`, `data_item1`, `data_item2`, `data_item3`, `data_item4`, `data_item5`, `DEFAULT_RESULT`, `result_type`) VALUES ('92018092991', '电能表当前各费率正/反向有/无功电能示值', '1130', '电能表实时数据', '电能表实时数据', '18010214230873', '7', '电能表当前各费率正/反向有/无功电能示值', '', '', '', '', '', '01');
+INSERT INTO q_item_para_origdetail  (`para_id`, `TEST_CATEGORIES`, `item_id`, `item_name`, `test_group`, `group_no`, `detect_item_point`, `data_item1`, `data_item2`, `data_item3`, `data_item4`, `data_item5`, `DEFAULT_RESULT`, `result_type`) VALUES ('92018092992', '各费率有功总最大需量及时标', '1130', '电能表实时数据', '电能表实时数据', '18010214230873', '8', '各费率有功总最大需量及时标', '', '', '', '', '', '01');
+INSERT INTO q_item_para_origdetail  (`para_id`, `TEST_CATEGORIES`, `item_id`, `item_name`, `test_group`, `group_no`, `detect_item_point`, `data_item1`, `data_item2`, `data_item3`, `data_item4`, `data_item5`, `DEFAULT_RESULT`, `result_type`) VALUES ('92018092993', '各费率当前有功最大需量及时标', '1130', '电能表实时数据', '电能表实时数据', '18010214230873', '9', '各费率当前有功最大需量及时标', '', '', '', '', '', '01');
+INSERT INTO q_item_para_origdetail  (`para_id`, `TEST_CATEGORIES`, `item_id`, `item_name`, `test_group`, `group_no`, `detect_item_point`, `data_item1`, `data_item2`, `data_item3`, `data_item4`, `data_item5`, `DEFAULT_RESULT`, `result_type`) VALUES ('92018092994', '实时总有功功率', '1130', '电能表实时数据', '电能表实时数据', '18010214230873', '10', '实时总有功功率', '', '', '', '', '', '01');
+INSERT INTO q_item_para_origdetail  (`para_id`, `TEST_CATEGORIES`, `item_id`, `item_name`, `test_group`, `group_no`, `detect_item_point`, `data_item1`, `data_item2`, `data_item3`, `data_item4`, `data_item5`, `DEFAULT_RESULT`, `result_type`) VALUES ('92018092995', '实时总无功功率', '1130', '电能表实时数据', '电能表实时数据', '18010214230873', '11', '实时总无功功率', '', '', '', '', '', '01');
+INSERT INTO q_item_para_origdetail  (`para_id`, `TEST_CATEGORIES`, `item_id`, `item_name`, `test_group`, `group_no`, `detect_item_point`, `data_item1`, `data_item2`, `data_item3`, `data_item4`, `data_item5`, `DEFAULT_RESULT`, `result_type`) VALUES ('92018092996', '实时功率因数', '1130', '电能表实时数据', '电能表实时数据', '18010214230873', '12', '实时功率因数', '', '', '', '', '', '01');
+INSERT INTO q_item_para_origdetail  (`para_id`, `TEST_CATEGORIES`, `item_id`, `item_name`, `test_group`, `group_no`, `detect_item_point`, `data_item1`, `data_item2`, `data_item3`, `data_item4`, `data_item5`, `DEFAULT_RESULT`, `result_type`) VALUES ('92018092997', '实时电压、电流', '1130', '电能表实时数据', '电能表实时数据', '18010214230873', '13', '实时电压、电流', '', '', '', '', '', '01');
+INSERT INTO q_item_para_origdetail  (`para_id`, `TEST_CATEGORIES`, `item_id`, `item_name`, `test_group`, `group_no`, `detect_item_point`, `data_item1`, `data_item2`, `data_item3`, `data_item4`, `data_item5`, `DEFAULT_RESULT`, `result_type`) VALUES ('92018092998', '电压、电流相角', '1130', '电能表实时数据', '电能表实时数据', '18010214230873', '14', '电压、电流相角', '', '', '', '', '', '01');
+
+
+INSERT INTO q_item_para_origdetail   (`para_id`, `TEST_CATEGORIES`, `item_id`, `item_name`, `test_group`, `group_no`, `detect_item_point`, `data_item1`, `data_item2`, `data_item3`, `data_item4`, `data_item5`, `DEFAULT_RESULT`, `result_type`) VALUES ('92018093054', '终端故障记录485通讯故障', '1133', '终端故障记录485通讯故障', '终端故障记录485通讯故障', '18010214230873', '1', '', '', '', '', '', '', '01');
+INSERT INTO q_item_para_origdetail   (`para_id`, `TEST_CATEGORIES`, `item_id`, `item_name`, `test_group`, `group_no`, `detect_item_point`, `data_item1`, `data_item2`, `data_item3`, `data_item4`, `data_item5`, `DEFAULT_RESULT`, `result_type`) VALUES ('82018093054', '终端抄表失败事件', '1134', '终端抄表失败事件', '终端抄表失败事件', '18010214230873', '1', '', '', '', '', '', '', '01');
+INSERT INTO q_item_para_origdetail   (`para_id`, `TEST_CATEGORIES`, `item_id`, `item_name`, `test_group`, `group_no`, `detect_item_point`, `data_item1`, `data_item2`, `data_item3`, `data_item4`, `data_item5`, `DEFAULT_RESULT`, `result_type`) VALUES ('20180921000891', '时钟召测和对时', '1151', '时钟召测和对时', '时钟召测和对时', '18010214230873', '1', '', '对时误差', '对时误差≤5s，日计时误差≤±0.5s/d。', '1', '', '1', '01');

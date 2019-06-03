@@ -1,0 +1,9 @@
+CREATE TABLE `m_detect_message` (
+  `id` varchar(64) NOT NULL COMMENT '主键',
+  `DETECT_TASK_NO` varchar(64) DEFAULT NULL COMMENT '检定任务单编号',
+  `DETECT_EQUIP_NO` varchar(64) DEFAULT NULL COMMENT '检定线/台体编号',
+  `ITEM_ID` varchar(32) DEFAULT NULL COMMENT '试验项ID',
+  `message` mediumtext COMMENT '报文信息',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+

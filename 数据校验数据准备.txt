@@ -1,0 +1,33 @@
+-- 数据校验数据准备
+
+-- 1 根据批次包名称查找客户走流程的任务的TASK_NO
+SELECT TASK_NO,SUPPLY_BEF_ID,equip_qty FROM  w_detect_task WHERE BATCH_PACKAGE_NAME='a';
+
+-- 2 根据批次包名称查找自己走流程的任务的TASK_NO
+SELECT TASK_NO,SUPPLY_BEF_ID FROM  w_detect_task WHERE BATCH_PACKAGE_NAME='b';
+
+-- 3 查找客户的任务对应bardode及序号
+SELECT EXPET_BAR_CODE,Numerical_Order from  w_expet_check_in_det where  SUPPLY_BEF_ID ='c';
+
+-- 4 查找自己的任务对应bardode及序号
+SELECT EXPET_BAR_CODE,Numerical_Order from  w_expet_check_in_det where  SUPPLY_BEF_ID ='d';
+
+-- 5 根据1步骤中的taskno在中间库找出中间库的数据
+SELECT * FROM  m_quality.m_detect_rslt  WHERE  DETECT_TASK_NO ='e' ;
+
+
+-- 6 首先把中间库客户的taskno(1步骤)修改成自己新建任务的taskno(2步骤)
+
+UPDATE m_quality.m_detect_rslt set DETECT_TASK_NO ='e' where DETECT_TASK_NO='x';
+
+
+--  7 修改把中间库客户的barcode(3步骤)修改成自己新建任务的barcode((4步骤) 相同Numerical_Order的进行修改
+
+UPDATE m_quality.m_detect_rslt set BAR_CODE ='e' where BAR_CODE='x';
+
+
+
+
+
+
+
